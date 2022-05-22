@@ -8,6 +8,13 @@ public class ConsumirRest
         {
             TokenEndpoint = string.Format(ConfigurationManager.AppSettings["Token_Url_Servicio"].ToString(), TokenTenant);
         }
+    
+        public class Persona
+        {
+            publilc int Id { get; set; }   
+            publilc string Nombres { get; set; }   
+            publilc string Apellidos { get; set; }   
+        }
 
         public TokenResponse Get(Persona person)
         {
